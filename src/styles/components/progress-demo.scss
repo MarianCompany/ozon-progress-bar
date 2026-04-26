@@ -1,0 +1,23 @@
+.progress-demo {
+
+  &__label {
+    margin: 0;
+  }
+
+  &__content {
+    display: grid;
+    gap: 64px;
+    justify-content: center;
+    margin-top: 16px;
+
+    @media ((orientation: landscape) and (min-width: 320px)) or (min-width: 568px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      justify-items: center;
+    }
+  }
+
+  &__progress-wrapper {
+    display: flex;
+  }
+}

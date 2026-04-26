@@ -1,0 +1,45 @@
+.input-checkbox {
+  width: 48px;
+  height: 24px;
+  position: relative;
+
+  background: #dddddd;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &_active {
+    background: #0000FF;
+  }
+
+  
+  &:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 9999px;
+
+    position: absolute;
+    left: 2px;
+    top: 2px;
+
+    transition: transform 0.3s;
+  }
+
+  &_active:before {
+    transform: translateX(24px)
+  }
+  
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+}

@@ -1,1 +1,3 @@
-console.log('it works')
+import './styles/main.scss'
+
+import './js/input-checkbox.js'

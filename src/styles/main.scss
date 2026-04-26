@@ -1,0 +1,14 @@
+@use './components/index';
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
