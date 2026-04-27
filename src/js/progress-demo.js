@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initProgress() {
     return new Progress({
         root: document.querySelector('.progress'),
-        initialValue: 70,
+        initialValue: 60,
         radius: 36,
     });
 }

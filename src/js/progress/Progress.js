@@ -3,7 +3,7 @@ import {ProgressRenderer} from "./ProgressRenderer.js";
 
 export class Progress {
     constructor({ root, initialValue = 0, radius = 45 }) {
-        this.core = new ProgressCore({ value: initialValue });
+        this.core = new ProgressCore({ value: validateValue(initialValue) });
         this.renderer = new ProgressRenderer({ root, radius });
 
         this.unsubscribe = this.core.subscribe(state => {
@@ -13,7 +13,7 @@ export class Progress {
     }
 
     setValue(v) {
-        this.core.setState({ value: Math.min(100, Math.max(0, v)) });
+        this.core.setState({ value: validateValue(v) });
     }
 
     setAnimated(v) {
@@ -32,4 +32,11 @@ export class Progress {
         this.unsubscribe();
         this.renderer.destroy();
     }
+}
+
+function validateValue(value) {
+    let num = Number(value);
+    if (Number.isNaN(num)) num = 0;
+
+    return Math.min(100, Math.max(0, num));
 }
