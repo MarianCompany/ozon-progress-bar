@@ -24,6 +24,10 @@ export class Progress {
         this.core.setState({ hidden: v });
     }
 
+    getState() {
+        return this.core.state
+    }
+
     destroy() {
         this.unsubscribe();
         this.renderer.destroy();
