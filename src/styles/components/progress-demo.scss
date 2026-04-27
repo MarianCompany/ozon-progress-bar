@@ -4,12 +4,14 @@
   }
 
   &__content {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 64px;
-    justify-content: center;
+    align-items:  center;
     margin-top: 16px;
 
     @media ((orientation: landscape) and (min-width: 320px)) or (min-width: 568px) {
+      display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       align-items: center;
       justify-items: center;
@@ -17,7 +19,9 @@
   }
 
   &__progress-wrapper {
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1;
     display: flex;
   }
 }
