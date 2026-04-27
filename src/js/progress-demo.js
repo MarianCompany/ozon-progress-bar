@@ -1,4 +1,4 @@
-import { Progress } from "./progress/Progress.js";
+import {Progress} from "./progress/index.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const progress = initProgress()
