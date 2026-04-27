@@ -28,6 +28,7 @@ function initControls(progress) {
         let value = +event.target.value.trim()
 
         if (isNaN(value) || value < 0) value = 0
+        if (value > 100) value = 100
 
         event.target.value = String(value)
         progress.setValue(value)
